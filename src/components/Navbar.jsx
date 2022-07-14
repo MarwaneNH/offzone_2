@@ -4,6 +4,8 @@ function Navbar() {
   const ul = useRef();
   const path = document.location.href;
 
+  console.log(path.slice(-1));
+
   useEffect(() => {
     const allUlBtns = [...ul.current.querySelectorAll("button")];
     allUlBtns.forEach((x) => {
@@ -81,7 +83,10 @@ function Navbar() {
           </a>
           <a href="/document">
             <li>
-              <button onClick={activateBtn} className="newNotif">
+              <button
+                onClick={activateBtn}
+                className={`${path.slice(-1) === "/" ? "active-btnn" : ""} newNotif`}
+              >
                 <svg
                   id="Calque_1"
                   data-name="Calque 1"
