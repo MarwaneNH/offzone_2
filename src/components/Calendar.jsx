@@ -54,8 +54,6 @@ function Calendar() {
     return [...new Set(mothDays)];
   };
 
-  console.log(q);
-
   const time = [
     "08:00",
     "09:00",
@@ -100,13 +98,13 @@ function Calendar() {
             </div>
             {time.map((item, index) => (
               <div key={index} className="time-item">
-                {rdv.map((element) => {
+                {rdv.map((element, index) => {
                   if (
                     element.date === todayDate(-25).slice(-5) &&
                     element.time === item
                   ) {
                     return (
-                      <div className="rdv">
+                      <div className="rdv" key={index}>
                         <div>
                           <h5>{element.name}</h5>
                           <p>{element.time}</p>
@@ -116,8 +114,6 @@ function Calendar() {
                         </button>
                       </div>
                     );
-                  } else {
-                    console.log("no");
                   }
                 })}
               </div>
@@ -136,13 +132,13 @@ function Calendar() {
 
                 {time.map((item, index) => (
                   <div key={index} className="time-item">
-                    {rdv.map((element) => {
+                    {rdv.map((element, index) => {
                       if (
                         element.date === x.slice(-5) &&
                         element.time === item
                       ) {
                         return (
-                          <div className="rdv">
+                          <div className="rdv" key={index}>
                             <div>
                               <h5>{element.name}</h5>
                               <p>{element.time}</p>

@@ -92,7 +92,7 @@ function Document() {
               <input type="number" placeholder="Numero" />
               <div>
                 <label htmlFor="type">Type</label>
-                <select value="">
+                <select>
                   <option></option>
                   <option>Lorem</option>
                   <option>Lorem</option>
@@ -102,7 +102,7 @@ function Document() {
                 <label htmlFor="duree">
                   <span>Du</span> <span>-</span> <span>au</span>
                 </label>
-                <select value="">
+                <select>
                   <option></option>
                   <option>Lorem</option>
                   <option>Lorem</option>

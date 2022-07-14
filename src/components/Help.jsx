@@ -85,7 +85,7 @@ function Help() {
         <div className="searchC">
           <h2>Recherche de Lorem Ipsum</h2>
           <p>Lorem Ipsum Lorem Ipsum</p>
-          <span>ABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
+          <span>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</span>
         </div>
       </div>
     </>

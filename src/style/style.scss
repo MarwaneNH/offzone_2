@@ -519,7 +519,7 @@ body {
       }
 
       span {
-        letter-spacing: 1em;
+        letter-spacing: 0.5em;
         font-weight: bolder;
         margin-left: 55px;
       }
@@ -882,4 +882,165 @@ body {
 .disable {
   pointer-events: none;
   opacity: 0.4;
+}
+.agenda {
+  position: relative;
+}
+.openMenu {
+  position: absolute;
+  top: 20px;
+  right: -60px;
+  border: none;
+  background-color: $purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  height: 40px;
+  width: 40px;
+}
+@media only screen and (max-width: 1250px) {
+  .main .agenda {
+    .left-bar {
+      z-index: 2;
+      height: 100vh;
+      background-color: #fafafa;
+      padding: 0 30px;
+      transition: all 400ms ease-in-out;
+      position: absolute;
+    }
+    .openM {
+      left: 0;
+    }
+    .closeM {
+      left: -380px;
+    }
+  }
+  .main .agenda .agenda-content {
+    width: 100%;
+    padding-left: 50px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .main header nav ul .user-nav {
+    display: none;
+  }
+  .main header nav ul {
+    gap: 15px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .main header {
+    height: 80px;
+  }
+  .main header nav {
+    align-items: center;
+    padding: 0 20px 0 30px;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .main .agenda .agenda-content .nav {
+    display: flex;
+    padding: 20px 10px 20px 70px;
+    justify-content: space-between;
+  }
+  .main .agenda .agenda-content {
+    width: 100%;
+    padding-left: 0;
+  }
+  .main .agenda .agenda-content .nav {
+    display: flex;
+    flex-wrap: wrap;
+    div {
+      margin: 10px 0;
+
+      &:last-child {
+        width: 100%;
+        justify-content: right;
+      }
+    }
+  }
+  .main .agenda .agenda-content .calendar {
+    width: 100%;
+    display: flex;
+    padding: 0 20px 60px 20px;
+  }
+}
+@media only screen and (max-width: 525px) {
+  .main .agenda .agenda-content .calendar {
+    min-width: 525px;
+  }
+  .main .agenda .agenda-content .nav {
+    min-width: 525px;
+  }
+  .main .agenda .agenda-content {
+    overflow-x: scroll;
+  }
+  .main footer {
+    width: 100%;
+    padding: 13px 30px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .main .agenda .agenda-content .calendar {
+    min-width: 525px;
+  }
+  .main .agenda .agenda-content .nav {
+    min-width: 525px;
+  }
+  .main .agenda .agenda-content {
+    overflow-x: scroll;
+  }
+  .main footer {
+    width: 100%;
+    padding: 13px 20px;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+
+    img {
+      width: 30px;
+      margin: 20px 5px 5px 5px;
+    }
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .main .document-section .container {
+    min-width: 1150px;
+  }
+  .main .document-section {
+    overflow-x: scroll;
+  }
+  .main .help {
+    gap: 20px;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .main .footer .content-container .content:nth-child(2) div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0 20px;
+    align-content: flex-start;
+    justify-content: left;
+    width: fit-content;
+    max-width: 500px;
+  }
+  .main .footer .content-container .content:nth-child(2) {
+    justify-content: left;
+  }
+  .main .footer .content-container {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .main .footer .content-container .content {
+    width: 100%;
+  }
+  .main .footer .searchC span {
+    letter-spacing: 0.5em;
+    font-weight: bolder;
+    margin-left: 0;
+  }
 }

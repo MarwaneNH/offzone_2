@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Calendar from "./Calendar";
 
 function Agenda() {
+  const [menu, setMenu] = useState(false);
+
   return (
     <div className="agenda">
-      <div className="left-bar">
+      <div className={`left-bar ${menu ? "openM" : "closeM"}`}>
+        <button className="openMenu" onClick={() => setMenu((x) => !x)}>
+          <img src="../icon/doctor.svg" alt="" />
+        </button>
         <div className="titre">
           <h2>Mes Lorem Ipsum</h2>
           <button>
